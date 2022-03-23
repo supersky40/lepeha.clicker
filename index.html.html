@@ -1,0 +1,48 @@
+<script>
+	var lepehacount=0;
+</script>
+<html>
+<head>
+<meta name="viewport content="width=device-width, initial-scale=1"> 
+<style>
+.square {
+	height:50px;
+	width:50px;
+	background-colore:#555;
+}
+</style>
+<title>LEPEHA</title>
+</head>
+<body>
+	<div class="square"></div>
+	<a href=# onclick="add()"><img src="DlkTFNa71P0.jpg"></a>
+	<br></br>
+	<h5>
+	сколько раз ты кликнул на дэба: </h5>
+	<input type="text" id="text" disabled style= text-align:center>
+	<script>
+	function add() {
+		lepehacount = lepehacount + 1
+		document.getElementById('text').value=lepehacount;
+		document.title=lepehacount + "LEPEHA";
+		}
+	</script>
+	LEPEHA
+	<br></br>
+		
+	<button><a href="#" onclick="save()">save</a></button>
+	<button><a href="#" onclick="load()">load</a></button>
+	
+	<script>
+	function save() {
+		localStorage.setItem("lepehacount",lepehacount);
+	}
+	function load(){
+		lepehacount=localStorage.getItem("lepehacount");
+		lepehacount=parseInt(lepehacount);
+		document.getElementById('text').value=lepehacount
+		document.title= lepehacount+"LEPEHA";
+	}
+	</script>
+</body>
+</html>
